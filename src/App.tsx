@@ -1,24 +1,5 @@
 import './App.css';
-
-// Challenge data structure
-interface Challenge {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-  tags: string[];
-}
-
-// Sample challenge data
-const challenges: Challenge[] = [
-  {
-    id: 1,
-    title: 'Challenge Title',
-    description: 'This is a brief description of the programming challenge. It should be concise and informative, giving users an idea of what the problem is about.',
-    category: 'React.js',
-    tags: ['basics', 'components', 'state management'],
-  },
-];
+import { challenges } from './data/challenges'
 
 // Main App component
 export default function App() {
@@ -56,6 +37,7 @@ export default function App() {
             <p className="mb-4 text-sm line-clamp-2">
               {challenge.description}
             </p>
+
             {/* Card Tags */}
             <div className="mb-4 flex flex-wrap gap-2">
               {challenge.tags.slice(0, 3).map((tag) => (
