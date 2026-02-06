@@ -17,13 +17,8 @@ export default function Home() {
                 </p>
             </header>
 
-            {/* Cards List */}
-            <CardsList />
-
-            {/* Empty State */}
-            {challenges.length === 0 && (
-                <EmptyState />
-            )}
+            {/* Cards or Empty State */}
+            {challenges.length > 0 ?  (<CardsList />) : (<EmptyState />)}
         </div>
     );
 }
