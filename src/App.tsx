@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import ChallengeList from './components/ChallengeList';
+import Home from './pages/Home';
 
 export default function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<ChallengeList />} />
+      <Route path="/" element={<Home />} />
       <Route path="/challenge/:id"
         element={
           <div className="min-h-screen bg-background flex items-center justify-center">
