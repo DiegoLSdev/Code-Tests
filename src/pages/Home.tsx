@@ -1,7 +1,7 @@
 import { challenges } from '../data/challenges';
-import ChallengeCard from '../components/ChallengeCard';
+import CardsList from '../components/CardsList';
 
-export default function ChallengeList() {
+export default function Home() {
     return (
         <div className="min-h-screen bg-background bg-grid-pattern">
             
@@ -16,8 +16,8 @@ export default function ChallengeList() {
                 </p>
             </header>
 
-            {/* Cards */}
-            <ChallengeCard/>
+            {/* Cards List */}
+            <CardsList/>
 
             {/* Empty State */}
             {challenges.length === 0 && (
