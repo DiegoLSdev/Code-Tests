@@ -1,8 +1,19 @@
 
-/**
- * -----------------------  THIS COMPONENT IS CREATED USING AI -----------------------
-*/
+/*
+-----------------------  THIS COMPONENT IS CREATED USING AI -----------------------
 
+INSTRUCTIONS:
+✓ Create separate state variables for counter2 and counter3
+✓ Update each counter's display to use its own state
+✓ Connect each button to update only its corresponding counter
+✓ Test that all three counters work independently
+
+EXTRA:
+✓ Each counter increases a different quantity
+✓ Create a generator of Counters
+✓ Generator accepts number to decide the increase quantity
+
+*/
 
 import { useState } from 'react';
 
@@ -10,9 +21,9 @@ export default function IndependentCounters() {
     const [counter, setCounter] = useState(0);
 
     return (
-        <div className="min-h-screen bg-background flex items-center justify-center p-4">
+        <div className="bg-background flex items-center justify-center">
             <div className="w-full max-w-4xl">
-                
+
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold mb-2">Independent Counters Challenge</h2>
@@ -21,7 +32,7 @@ export default function IndependentCounters() {
 
                 {/* Counters Grid */}
                 <div className="grid gap-6 md:grid-cols-3">
-                    
+
                     {/* Counter 1 */}
                     <div className="rounded-lg border border-border bg-card p-6">
                         <h3 className="text-lg font-semibold mb-4 text-center">Counter 1</h3>
@@ -29,13 +40,13 @@ export default function IndependentCounters() {
                             <span className="text-5xl font-bold">{counter}</span>
                         </div>
                         <div className="flex gap-2">
-                            <button 
+                            <button
                                 onClick={() => setCounter(counter - 1)}
                                 className="flex-1 rounded-md bg-secondary px-4 py-2 text-sm font-medium hover:bg-secondary/80 transition-colors"
                             >
                                 -
                             </button>
-                            <button 
+                            <button
                                 onClick={() => setCounter(counter + 1)}
                                 className="flex-1 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90 transition-colors"
                             >
@@ -51,13 +62,13 @@ export default function IndependentCounters() {
                             <span className="text-5xl font-bold">{counter}</span>
                         </div>
                         <div className="flex gap-2">
-                            <button 
+                            <button
                                 onClick={() => setCounter(counter - 1)}
                                 className="flex-1 rounded-md bg-secondary px-4 py-2 text-sm font-medium hover:bg-secondary/80 transition-colors"
                             >
                                 -
                             </button>
-                            <button 
+                            <button
                                 onClick={() => setCounter(counter + 1)}
                                 className="flex-1 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90 transition-colors"
                             >
@@ -73,13 +84,13 @@ export default function IndependentCounters() {
                             <span className="text-5xl font-bold">{counter}</span>
                         </div>
                         <div className="flex gap-2">
-                            <button 
+                            <button
                                 onClick={() => setCounter(counter - 1)}
                                 className="flex-1 rounded-md bg-secondary px-4 py-2 text-sm font-medium hover:bg-secondary/80 transition-colors"
                             >
                                 -
                             </button>
-                            <button 
+                            <button
                                 onClick={() => setCounter(counter + 1)}
                                 className="flex-1 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90 transition-colors"
                             >
@@ -91,14 +102,24 @@ export default function IndependentCounters() {
                 </div>
 
                 {/* Help Section */}
-                <div className="mt-12 rounded-lg border border-border bg-card p-6">
-                    <h3 className="text-lg font-semibold mb-4">Instructions</h3>
-                    <ul className="space-y-2 text-sm">
-                        <li>✓ Create separate state variables for counter2 and counter3</li>
-                        <li>✓ Update each counter's display to use its own state</li>
-                        <li>✓ Connect each button to update only its corresponding counter</li>
-                        <li>✓ Test that all three counters work independently</li>
-                    </ul>
+                <div className="mt-12 rounded-lg border border-border bg-card p-6 grid gap-6 md:grid-cols-2">
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Instructions</h3>
+                        <ul className="space-y-2 text-sm">
+                            <li>✓ Create separate state variables for counter2 and counter3</li>
+                            <li>✓ Update each counter's display to use its own state</li>
+                            <li>✓ Connect each button to update only its corresponding counter</li>
+                            <li>✓ Test that all three counters work independently</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Extra</h3>
+                        <ul className="space-y-2 text-sm">
+                            <li>✓ Each counter increases a different quantity</li>
+                            <li>✓ Create a generator of Counters</li>
+                            <li>✓ Generator accepts number to decide the increase quantity</li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>

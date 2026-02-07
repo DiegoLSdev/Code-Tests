@@ -1,3 +1,5 @@
+import type { ComponentType } from "react";
+import IndependentCounters from "../challenges/IndependentCounters";
 // Challenge data structure
 interface Challenge {
   id: number;
@@ -5,22 +7,18 @@ interface Challenge {
   description: string;
   category: string;
   tags: string[];
+  component?: ComponentType
 }
 
 // Sample challenge data
 export const challenges: Challenge[] = [
+
   {
     id: 1,
-    title: 'Challenge Title 1',
-    description: 'This is a brief description of the programming challenge. It should be concise and informative, giving users an idea of what the problem is about.',
+    title: 'Independent Counters',
+    description: 'This counters are broken in many ways. Navigate to src/challenges/IndependentCounters.tsx to find the broken component and pass the test.',
     category: 'React.js',
-    tags: ['basics', 'components', 'state'],
-  },
-    {
-    id: 2,
-    title: 'Challenge Title 2',
-    description: 'This is a brief description of the programming challenge. It should be concise and informative, giving users an idea of what the problem is about.',
-    category: 'React.js',
-    tags: ['basics', 'components', 'state'],
+    tags: ['basics', 'state', 'logic'],
+    component:IndependentCounters
   },
 ];

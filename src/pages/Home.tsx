@@ -11,10 +11,11 @@ export default function Home() {
                 <h1 className='font-bold mt-2 text-3xl'>
                     <span>Programming</span> <span>Challenges</span>
                 </h1>
-                <p className="font-mono font-semibold mt-4 text-lg">
+                <p className="font-mono mt-4 text-lg text-muted">
                     Sharpen your coding skills with curated algorithm and data structure problems. Each
-                    challenge includes detailed explanations and optimized solutions.
+                    challenge includes a broken component with instructions to pass the test. To solve them or add new ones, check the <a href="https://github.com/DiegoLSdev/Code-Tests" className="font-semibold text-primary hover:underline" target="_blank" rel="noopener noreferrer">GitHub repository</a>.
                 </p>
+
             </header>
 
             {/* Cards or Empty State */}
