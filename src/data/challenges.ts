@@ -1,5 +1,7 @@
 import type { ComponentType } from "react";
 import IndependentCounters from "../challenges/IndependentCounters";
+import ToggleCards from "../challenges/ToggleCards";
+
 // Challenge data structure
 interface Challenge {
   id: number;
@@ -20,5 +22,13 @@ export const challenges: Challenge[] = [
     category: 'React.js',
     tags: ['basics', 'state', 'logic'],
     component:IndependentCounters
+  },
+    {
+    id: 2,
+    title: 'Toggle Cards',
+    description: 'This cards are broken. Navigate to src/challenges/ToggleCards.tsx to find the broken component and pass the test.',
+    category: 'React.js',
+    tags: ['basics', 'state', 'logic'],
+    component:ToggleCards
   },
 ];
