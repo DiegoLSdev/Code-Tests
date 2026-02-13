@@ -2,6 +2,9 @@ import type { ComponentType } from "react";
 import IndependentCounters from "../challenges/IndependentCounters";
 import ToggleCards from "../challenges/ToggleCards";
 import ShoppingCart from "../challenges/ShoppingCart";
+import IndependentCountersSolution from "../solutions/IndependentCountersSolution";
+import ToggleCardsSolution from "../solutions/ToggleCardsSolution";
+import ShoppingCartSolution from "../solutions/ShoppingCartSolution";
 
 // Challenge data structure
 interface Challenge {
@@ -10,7 +13,8 @@ interface Challenge {
   description: string;
   category: string;
   tags: string[];
-  component?: ComponentType
+  component?: ComponentType;
+  solutionComponent?: ComponentType;
 }
 
 // Sample challenge data
@@ -22,7 +26,8 @@ export const challenges: Challenge[] = [
     description: 'This counters are broken in many ways. Navigate to src/challenges/IndependentCounters.tsx to find the broken component and pass the test.',
     category: 'React.js',
     tags: ['basics', 'state', 'logic'],
-    component: IndependentCounters
+    component: IndependentCounters,
+    solutionComponent: IndependentCountersSolution
   },
   {
     id: 2,
@@ -30,7 +35,8 @@ export const challenges: Challenge[] = [
     description: 'This cards are broken. Navigate to src/challenges/ToggleCards.tsx to find the broken component and pass the test.',
     category: 'React.js',
     tags: ['basics', 'state', 'logic'],
-    component: ToggleCards
+    component: ToggleCards,
+    solutionComponent: ToggleCardsSolution
   },
     {
     id: 3,
@@ -38,6 +44,7 @@ export const challenges: Challenge[] = [
     description: 'This shopping cart is broken. Navigate to src/challenges/ShoppingCart.tsx to find the broken component and pass the test.',
     category: 'React.js',
     tags: ['basics', 'state', 'logic'],
-    component: ShoppingCart
+    component: ShoppingCart,
+    solutionComponent: ShoppingCartSolution
   },
 ];

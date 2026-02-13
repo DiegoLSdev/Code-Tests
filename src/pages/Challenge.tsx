@@ -24,9 +24,17 @@ export default function Challenge() {
     return (
         <div className="min-h-screen bg-background bg-grid-pattern">
             <div className="container mx-auto px-4 py-12">
-                <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline mb-8">
-                    ← Back to Challenges
-                </Link>
+                <div className="flex items-center justify-between mb-8">
+                    <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+                        ← Back to Challenges
+                    </Link>
+                    <Link
+                        to={`/challenge/${id}/solution`}
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium text-sm"
+                    >
+                        Ver Solución →
+                    </Link>
+                </div>
                 {/* CHALLENGE HEADER */}
                 <div className="mb-8">
                     <span className="font-mono text-xs mb-4 inline-block">
